@@ -8,14 +8,21 @@ use Silex\Provider\TwigServiceProvider;
 class Application extends SilexApplication
 {
 	
-	function __construct(array $values = [])
+	public function __construct(array $values = [])
 	{
 		parent::__construct($values);
 
+		$this->configureServices();
+		$this->createDBTables();
+		$this->configureControllers();
+
+
+	}
+
+	private function configureServices(){
 		$this['debug'] = true;
 
-
-
+		//Twigi seadistamine
 		$this->register(new TwigServiceProvider(), [
 			'twig.path' => __DIR__.'/../views',
 		]);
@@ -27,7 +34,9 @@ class Application extends SilexApplication
 				'path' => __DIR__.'/../database/app.db',
 			],
 		]);
+	}
 
+	private function createDBTables(){
 		//Tehakse tabel 'bookings', kui seda veel olemas ei ole.
 		if (!$this['db']->getSchemaManager()->tablesExist('bookings')){
 			$this['db']->executeQuery("CREATE TABLE bookings (
@@ -45,10 +54,12 @@ class Application extends SilexApplication
 				payingMethod VARCHAR(10) NOT NULL
 				);");
 		}
+	}
 
+	private function configureControllers(){
+		//Routes
 		$this->get('/bookings/create', function () use ($app) {
 			return $this['twig']->render('base.html.twig');
 		});
-
 	}
 }
