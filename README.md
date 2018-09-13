@@ -36,6 +36,7 @@ composer install
 * [Twig] - Templates
 * [Doctrine DBAL] - Database abstraction layer
 * [SQLite] - Database vendor
+* [PSR-4] - Autoload
 
 ## Versioning
 
