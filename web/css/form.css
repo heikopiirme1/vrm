@@ -1,0 +1,73 @@
+.booking-form {
+    margin-bottom: 2em;
+    padding: 1em;
+    width: 25%;
+    font-family: Roboto;
+    font-size: .9em;
+    font-weight: 300;
+    margin: 0 auto;
+}
+
+.booking-form .form-row {
+    margin: 1em 0.5em;
+    clear: both;
+    width: 100%;
+}
+
+.booking-form .form-row label {
+    width: 10em;
+    float: left;
+    display: inline-block;
+    text-align: left;
+    padding-right: 15px;
+    padding-left: 35px;
+}
+
+.booking-form .form-row textarea {
+    width: 240px;
+}
+
+.booking-form .form-row select {
+    margin-right: .25em;
+}
+
+.booking-form .form-row #form_nrOfPeople {
+    width: 230px;
+}
+
+.booking-form .form-row #form_payingMethod {
+    width: 245px;
+}
+
+.booking-form .form-row select {
+    display: inline-block;
+    border: 1px solid #ccc;
+    width: 118px;
+    border-radius: 3px;
+    overflow: hidden;
+    background: #fafafa;
+}
+
+.booking-form .form-row select:focus {
+    outline: none;
+}
+
+.booking-form #form_submit {
+    background-color: #0fbcf9;
+    color: #FFF;
+    border: 1px solid #0fbcf9;
+    padding: 15px 35px;
+    border-radius: 32px;
+    margin: 0 auto;
+    width: 100%;
+    transition: 0.2s;
+}
+
+.booking-form #form_submit:hover {
+    background-color: #fff;
+    color: #0fbcf9;
+    border: 1px solid #0fbcf9;
+    padding: 15px 35px;
+    border-radius: 32px;
+    margin: 0 auto;
+}

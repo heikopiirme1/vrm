@@ -2,7 +2,11 @@
     "require": {
         "silex/silex": "^2.0",
         "twig/twig": "^2.5",
-        "doctrine/dbal": "^2.8"
+        "doctrine/dbal": "^2.8",
+        "symfony/form": "^4.1",
+        "symfony/twig-bridge": "^4.1",
+        "symfony/config": "^4.1",
+        "symfony/translation": "^4.1"
     },
     "autoload": {
     	"psr-4": { "BookingApp\\": "src" }
